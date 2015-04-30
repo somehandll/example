@@ -1,0 +1,32 @@
+footer {
+    @include center($page-width);
+    margin: 64px auto;
+
+    > * {
+        @include column(1/5);
+    }
+    li {
+        margin: 0 0 10px;
+    }
+    li:first-child {
+        margin: 0 0 20px;
+    }
+    h6 {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    a {
+        color: #505050;
+        font-size: 14px;
+    }
+
+}
+.copyright {
+    @include center($page-width);
+
+    color: #505050;
+    font-size: 12px;
+    text-align: center;
+}

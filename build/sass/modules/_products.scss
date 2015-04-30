@@ -1,0 +1,135 @@
+.bestsellers-grid {
+    @include center($page-width);
+    border: 32px solid #FFF;
+
+    background-color: #FFF;
+}
+.bestsellers {
+    @include column(11/40, $gutter: 0);
+    box-sizing: border-box;
+    padding: 0 24px 0 0;
+
+    ul {
+        background-color: #363636;
+    }
+    li {
+        border-top: 1px solid #6f6e6f;
+        padding: 1px 24px 0;
+
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 50px;
+        text-transform: uppercase;
+    }
+    li:first-child {
+        border: 0 none;
+    }
+    a {
+        display: block;
+        padding: 0 0 0 18px;
+        position: relative;
+
+        color: #FFF;
+
+        &:before {
+            left: 0;
+            position: absolute;
+            top: 0;
+
+            content: "\f04b";
+            font-family: fontAwesome;
+            font-size: 8px;
+        }
+    }
+}
+.products {
+    @include column(29/40);
+
+    h5 {
+        @include column(1/1);
+        box-sizing: border-box;
+        margin-bottom: 18px;
+
+        a {
+            float: right;
+            margin: 0 24px 0 0;
+            padding: 0 20px 0 0;
+
+            color: #FFF;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    }
+    .product {
+        @include column(1/3);
+        box-sizing: border-box;
+        margin: 0 0 40px 20px;
+
+        img {
+            float: left;
+            max-width: 100%;
+        }
+        &:nth-of-type(3n+1) {
+            margin-left: 0;
+        }
+        .name {
+            float: left;
+            margin: 0 0 16px;
+            width: 100%;
+
+            font-weight: 700;
+        }
+        span {
+            float: left;
+            width: 50%;
+        }
+        .price {
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .saving {
+            color: $red;
+            text-align: right;
+        }
+        em {
+            font-weight: 800;
+        }
+    }
+    .image--wrap {
+        float: left;
+        margin: 0 0 14px;
+        position: relative;
+    }
+    .reviews {
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        padding: 15px 16px 14px;
+        position: absolute;
+        width: 100%;
+
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #FFF;
+        font-size: 14px;
+    }
+    .stars {
+        float: right;
+    }
+    .fa-star {
+        margin: 0 0 0 2px;
+
+        color: #f9b233;
+    }
+}
+h5 {
+    padding: 0 0 0 24px;
+
+    background-color: #0B0B0B;
+    color: #FFF;
+    line-height: 88px;
+    font-size: 30px;
+    font-weight: 700;
+}

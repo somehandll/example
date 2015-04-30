@@ -1,0 +1,35 @@
+.brands {
+    @include center($page-width);
+
+    border-left: 32px solid #FDFCFD;
+    border-right: 32px solid #FDFCFD;
+
+    background-color: #FDFCFD;
+
+    > div,
+    .brand {
+        @include column(1/6);
+    }
+    .brand {
+        padding-top: 62px;
+    }
+    a {
+
+        margin: 10px 0 0;
+        position: relative;
+
+        color: #FFCB08;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    span {
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+    img {
+        @include align();
+    }
+}

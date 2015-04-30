@@ -1,0 +1,66 @@
+.promo-block {
+    padding: 12px 0 14px;
+
+    background-color: #000;
+    color: #FFF;
+
+    > div {
+        @include center($page-width);
+    }
+    .strapline {
+        @include column(1/2, $gutter: $jeet-gutter * 2);
+        position: relative;
+
+        h4 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+    .social-icons {
+
+        position: absolute;
+        right: 40px;
+        top: 12px;
+
+        a {
+            margin: 0 0 0 12px;
+            color: $teal;
+            font-size: 24px;
+        }
+        .fa-google-plus {
+            font-size: 20px;
+        }
+
+    }
+
+}
+.strapline-full {
+    @include center($page-width);
+
+    border: 32px solid #FFF;
+    border-top: 0 none;
+    margin: 0 auto;
+
+    background-color: #FBFBFC;
+
+    p {
+        border: 1px solid #EBEBEB;
+        box-sizing: border-box;
+        padding: 38px 40px 42px 32px;
+
+        font-size: 30px;
+        line-height: 44px;
+
+        em {
+            color: $red;
+            font-weight: 700;
+        }
+    }
+    .button {
+        float: right;
+    }
+
+}

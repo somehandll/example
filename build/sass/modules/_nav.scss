@@ -1,0 +1,70 @@
+nav {
+    background-color: #000;
+
+    ul {
+        @include center($page-width);
+    }
+    li {
+        @include column(1/6, $gutter: 0);
+        border-bottom: 5px solid;
+    }
+    a {
+        display: block;
+
+        color: #FFF;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        line-height: 38px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .fly {
+        border-color: $cornflower;
+    }
+    .carp {
+        border-color: $royal;
+    }
+    .match {
+        border-color: $pink;
+    }
+    .predator {
+        border-color: $teal;
+    }
+    .sea {
+        border-color: $yellowgreen;
+    }
+    .sale {
+        border-color: $red;
+    }
+}
+.promotion-nav {
+    padding: 6px 0;
+
+    background-color: #fefdfe;
+
+    > ul {
+        @include center($page-width);
+    }
+    li {
+        @include column(1/4, $gutter: 0);
+        box-sizing: border-box;
+        border-left: 1px solid #fefdfe;
+        padding: 8px 0;
+
+        background-color: #e9eef1;
+
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+
+        &:first-child {
+            border: 0 none;
+        }
+    }
+    em {
+        display: block;
+
+        color: #8a99a1;
+    }
+}

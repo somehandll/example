@@ -1,0 +1,109 @@
+header {
+    height: 125px;
+
+    background-color: $headerBg;
+
+    > div {
+        @include center($page-width);
+    }
+}
+header {
+    .logo {
+        @include col(1/3, $gutter: 0);
+    }
+    .search-wrap,
+    .basket {
+        @include col(1/3, $gutter: 0);
+    }
+    .search-wrap {
+        position: relative;
+    }
+    .top-links {
+        @include col(2/3, $gutter: 0);
+    }
+}
+header {
+    .logo--img {
+        height: 52px;
+        margin: 32px 0 0;
+        width: 210px;
+    }
+    .search {
+        border: 0 none;
+        box-sizing: border-box;
+        padding: 13px 48px 12px 14px;
+        width: 100%;
+
+        font-family: lato;
+        font-size: 15px;
+    }
+    .fa-search {
+        right: 16px;
+        position: absolute;
+        top: 0;
+
+        cursor: pointer;
+        line-height: 42px;
+    }
+    .basket {
+        float: right;
+
+        cursor: pointer;
+        text-align: right;
+
+        span {
+            color: #FFF;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .items {
+            border-left: 1px solid #FFF;
+            margin: 0 0 0 12px;
+            padding: 0 0 0 12px;
+            color: $teal;
+        }
+        .fa-shopping-cart {
+            margin: 0 10px 0 0;
+            color: $teal;
+            font-size: 24px;
+        }
+
+    }
+    .top-links {
+        margin: 15px 0 22px;
+
+        .tel {
+            float: left;
+
+            color: #FFF;
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+    .quick-links {
+        float: right;
+        margin: 2px 0 0;
+
+        li {
+            float: left;
+            margin: 0 0 0 18px;
+
+            &:first-child {
+                margin: 0;
+            }
+
+            &:last-child a {
+                color: $teal;
+            }
+        }
+        a {
+            color: #FFF;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    }
+}

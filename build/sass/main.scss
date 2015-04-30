@@ -1,0 +1,71 @@
+@import "./partials/variables";
+@import "./partials/normalise";
+@import "./vendor/jeet";
+@import "./partials/icons";
+
+$jeet-max-width: 960px;
+$page-width: $jeet-max-width;
+
+body {
+    padding: 0 0 64px;
+    width: 100%;
+
+    background-color: #f1eff0;
+    font-family: lato;
+}
+a {
+    text-decoration: none;
+}
+.button {
+    padding: 16px 32px 15px;
+
+    background-color: #000;
+
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 13px;
+    text-align: center;
+    text-transform: uppercase;
+}
+main {
+    @include center(100);
+    overflow: hidden;
+    width: 100%;
+}
+
+@import "./modules/header";
+@import "./modules/nav";
+
+#content {
+    @include center($page-width);
+    height: 458px;
+    position: relative;
+    width: 100%;
+
+    &:before,
+    &:after {
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        background-color: rgba(255,255,255,.6);
+        z-index: 1;
+    }
+    &:before {
+        left: -100%;
+    }
+    &:after {
+        right: -960px;
+    }
+}
+
+@import "./modules/carousel";
+@import "./modules/promotions";
+@import "./modules/blogs";
+@import "./modules/brands";
+@import "./modules/products";
+@import "./modules/footer";

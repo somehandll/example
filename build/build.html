@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>CTI Example</title>
+        <meta name="description" content="CTI fish.. thing">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+        <link href='css/main.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        __include('./header.html')
+        __include('./nav.html')
+        __include('./nav_promo.html')
+        <main>
+            <div id="content"></div>
+            __include('./promo_top.html')
+            __include('./blog.html')
+            __include('./promo_strapline.html')
+            __include('./brands.html')
+            <div class="bestsellers-grid">
+                __include('./bestsellers.html')
+                __include('./products.html')
+            </div>
+        </main>
+        __include('./footer.html')
+        <script src="js/bundle.js"></script>
+    </body>
+</html>

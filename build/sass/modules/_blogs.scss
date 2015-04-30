@@ -1,0 +1,115 @@
+.blogs {
+    @include center($page-width);
+    border: 32px solid #FFF;
+    border-bottom: 0 none;
+}
+.blog {
+    @include column(1/2, $gutter: 0);
+    border-bottom: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    box-sizing: border-box;
+    min-height: 300px;
+    position: relative;
+}
+.blog {
+
+    &:first-child {
+        border-left: 0 none;
+    }
+    &:last-child,
+    &:nth-last-child(2) {
+        @include column(1/4, $gutter: 0);
+
+        h4 {
+            margin: 0 0 8px;
+
+            font-size: 34px;
+        }
+        .text {
+            bottom: 0;
+            padding: 12px 20px 12px 22px;
+            top: auto;
+            width: 100%;
+
+            box-sizing: border-box;
+        }
+    }
+    &:nth-child(3n) {
+        border: 0 none;
+    }
+}
+.blog {
+    .text {
+        border-right: 11px solid white;
+        left: 0;
+        padding: 14px 24px 20px 40px;
+        position: absolute;
+        top: 60px;
+        width: 228px;
+
+        background-color: rgba(0, 0, 0, .75);
+        color: #FFF;
+
+        &:after {
+            position: absolute;
+            right: -20px;
+            top: 62px;
+
+            content: "\f04b";
+            font-family: fontAwesome;
+            font-size: 13px;
+        }
+
+        &.match {
+            top: 86px;
+        }
+    }
+    h4 {
+        margin: 0 0 18px;
+
+        font-size: 44px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    img {
+        float: left;
+    }
+    .fly {
+        border-color: $cornflower;
+
+        &:after {
+            color: $cornflower;
+        }
+    }
+    .carp {
+        border-color: $royal;
+
+        &:after {
+            color: $royal;
+        }
+    }
+    .match {
+        border-color: $pink;
+
+        &:after {
+            color: $pink;
+        }
+    }
+    .predator {
+        border-color: $teal;
+
+        &:after {
+            display: none;
+        }
+    }
+    .sea {
+        border-color: $yellowgreen;
+
+        &:after {
+            display: none;
+        }
+    }
+}
